@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+}
+
+body {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url();
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    animation: waves;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    height: 100vh;
+}
+
+:root {
+    --large-font: 100px;
+    --small-font: 60px;
+    --very-small-font: 40px;
+}
+
+h1 {
+    letter-spacing: 3px;
+}
+
+.clock-block {
+    padding: 100px 150px;
+    background: black;
+    color: white;
+}
+
+.clock>span {
+    font-size: var(--large-font);
+}
+
+.date>span {
+    text-align: center;
+    font-size: var(--small-font);
+}
+
+button {
+    outline: 0px;
+    border: 0px;
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 20px;
+}
+
+@media only screen and (max-width:700px) {
+    .clock>span {
+        font-size: var(--small-font);
+    }
+    .date>span {
+        text-align: center;
+        font-size: var(--very-small-font);
+    }
+}
+
+@keyframes waves {
+    0% {
+        background-position: center;
+    }
+    100% {
+        background-position: top;
+    }
+}
+
+.text {
+    position: fixed;
+    color: blue;
+    bottom: 0px;
+}
